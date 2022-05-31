@@ -13,12 +13,11 @@ def perform_processing(
     # return predicted_data
     loaded_model = pickle.load(open("processing/model.sav", 'rb'))
     predicted_data = loaded_model.predict(input_data)
-    new = pd.DataFrame(predicted_data)
+    new = pd.DataFrame(predicted_data,columns=['DECYZJA'])
     # for the simplest approach generate a random DataFrame with proper column names and size
     # column_names = ['DECYZJA']
     # predicted_data = pd.DataFrame(
     #     np.random.randint(low=0, high=2, size=(len(input_data.index), len(column_names))),
     #     columns=column_names
     # )
-    print(predicted_data)
     return new

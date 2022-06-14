@@ -26,6 +26,7 @@ def main():
     predicted_data = perform_processing(input_data)
     # print(predicted_data.head())
     # sample for calculating accuracy of the prediction
+
     print(accuracy_score(gt_data, predicted_data))
 
     predicted_data.to_csv(results_file, sep='\t', encoding='utf-8')

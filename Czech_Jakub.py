@@ -28,7 +28,7 @@ def main():
     # sample for calculating accuracy of the prediction
     print(accuracy_score(gt_data, predicted_data))
 
-    predicted_data.to_csv(results_file,index=False, sep='\t', encoding='utf-8')
+    predicted_data.to_csv(results_file, sep='\t', encoding='utf-8')
 
 
 if __name__ == '__main__':
